@@ -1,0 +1,13 @@
+####################
+# GZIP COMPRESSION #
+####################
+
+Options -Indexes
+
+FileETag MTime Size
+
+RewriteEngine on
+
+# Disable HTTP TRACE
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
